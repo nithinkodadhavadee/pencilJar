@@ -2,6 +2,10 @@
 	<head> 
 		<title> Pencil Jar </title>
 		<style>
+			*{
+				box-sizing: border-box;
+			}
+
 			.box{
 				position: absolute;
 				top: 0;
@@ -24,7 +28,7 @@
 			.jarWalls{
 				height: 60%;
 				width: 80%;
-				background:#a1e0da;
+				background:#a1e0da; /* rgb(161, 224, 218) */
 				position: absolute;
 				bottom: 0.5%;
 				left: 10%;
@@ -40,6 +44,76 @@
 				bottom: 60%;
 				left: 25%;
 				opacity: 0.75;
+				z-index: 3;
+			}
+			.jarLong{
+				width: 3%;
+				height: 20%;
+				border-radius: 1rem;
+				background: #ddfbff;
+				position: absolute;
+				bottom: 20%;
+				left: 5%;
+			}
+			.jarShort{
+				width: 3%;
+				height: 5%;
+				border-radius: 1rem;
+				background: #ddfbff; /* rgb(221, 251, 255) */
+				position: absolute;
+				bottom: 45%;
+				left: 5%;
+			}
+			.pencil{
+				width: 10%;
+				height: 80%;
+				background: #fc9e46;
+				position: absolute;
+				bottom: 7%;
+				left: 32%;
+				border-left: solid 0.1em #bc8742;
+				border-right: solid 0.1em #bc8742;Î
+				z-index: 2;
+				transform: rotate(-10deg);
+			}
+			.pencilEnd{
+				clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+				width: 110%;
+				height: 13%;
+				background: #f2ec9b;
+				position: absolute;
+				top: -13%;
+				left: -5%;
+			}
+			.pencilLead{
+				width: 100%;
+				height: 30%;
+				background: #000;
+				position: absolute;
+				top: 0%;
+			}
+			.pencilInner{
+				width: 33%;
+				height: 100%;
+				background: #bc8742;
+				position: absolute;
+				bottom: 0%;
+				left: 33%;
+			}
+			.pencilMetal{
+				width: 125%;
+				height: 3%;
+				background: #8e939e;
+				position: absolute;
+				bottom: -3%;
+				left: -12%;
+			}
+			.pencilRubber{
+				width: 100%;
+				height: 5%;
+				background: #e5758f;
+				position: absolute;
+				bottom: -8%;
 			}
 		</style>
 	</head>
@@ -48,10 +122,20 @@
 		<div class="box"> 
 			<div class="jar"> 
 				<div class="jarBottom"></div>
-				<div class="jarWalls"></div>
+				<div class="jarWalls">
+					<div class="jarLong"></div>
+					<div class="jarShort"></div>
+				</div>
 				<div class="jarTop"></div>
 			</div>
-			<div class="pencil"> </div>
+			<div class="pencil"> 
+				<div class="pencilEnd"> 
+					<div class="pencilLead"> </div>
+				</div>
+				<div class="pencilInner"> </div>
+				<div class="pencilMetal"> </div>
+				<div class="pencilRubber"> </div>
+			</div>
 			<div class="scissors"> </div>
 		</div>
 	</body>
